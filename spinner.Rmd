@@ -25,6 +25,8 @@ Using the function defined above, simulate the game 10,000 times and store the r
 Using the values calculated in step 2, calculate an estimate of the likelihood that you win enough tickets to get the stuffed rat. (10 points)
 Build a 95% confidence interval on the estimate you calculated. (10 points)
 
+***
+
 Load library.
 ```{r message = FALSE}
 library(tidyverse)
@@ -92,13 +94,3 @@ games %>%
             Lower = Win_Rat - qnorm(0.975) * sqrt(Win_Rat * (1 - Win_Rat) / n()),
             Upper = Win_Rat + qnorm(0.975) * sqrt(Win_Rat * (1 - Win_Rat) / n()))
 ```
-
-
-
-
-
-
-
-
-
-
